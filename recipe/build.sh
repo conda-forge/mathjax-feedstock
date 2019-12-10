@@ -13,6 +13,7 @@ fi
 
 for di in ./*
 do
+    echo "$di"
     if [[ -d "$di" && ! -d ./mathjax ]]; then
         mv "$di" ./mathjax
     fi
