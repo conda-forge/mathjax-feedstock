@@ -12,10 +12,6 @@ source:
 build:
    number: 0
 
-requirements:
-  build:
-    - conda-forge::git  # [win]
-
 test:
   commands:
     - mathjax-path  # [unix]
@@ -35,3 +31,4 @@ about:
 extra:
   recipe-maintainers:
     - kiwi0fruit
+    - tdegeus
