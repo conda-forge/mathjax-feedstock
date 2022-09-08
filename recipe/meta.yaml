@@ -10,7 +10,7 @@ source:
   sha256: 71ea2429b1b5b5d796d3f89303a33d61ce8459897b48973d768261e33d6268c0
 
 build:
-   number: 0
+   number: 1
 
 test:
   commands:
@@ -18,7 +18,7 @@ test:
 
 about:
   home: https://github.com/mathjax/MathJax
-  license: "Apache 2.0"
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: "Beautiful math in all browsers. MathJax is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all browsers. (use mathjax-path script)"
