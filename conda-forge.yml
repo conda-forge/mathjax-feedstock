@@ -6,3 +6,6 @@ appveyor:
     BINSTAR_TOKEN: tumuXLL8PU75WMnRDemRy02ruEq2RpNxeK3dz0MjFssnosPm2v4EFjfNB4PTotA1
 provider:
   win: azure
+build_platform:
+  osx_arm64: osx_64
+test_on_native_only: true
