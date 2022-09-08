@@ -190,6 +190,3 @@ Feedstock Maintainers
 * [@kiwi0fruit](https://github.com/kiwi0fruit/)
 * [@tdegeus](https://github.com/tdegeus/)
 
-
-<!-- dummy commit to enable rerendering -->
-
