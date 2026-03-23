@@ -17,7 +17,7 @@ test:
     - mathjax-path  # [unix]
     - test -f "$(mathjax-path)tex-chtml.js"  # [unix]
     - cmd /c "%PREFIX%\Scripts\mathjax-path.bat"  # [win]
-    - bash "%PREFIX%\Scripts\mathjax-path"  # [win]
+    - if exist "%PREFIX%\Library\lib\mathjax\tex-chtml.js" (exit 0) else (exit 1)  # [win]
 
 about:
   home: https://github.com/mathjax/MathJax

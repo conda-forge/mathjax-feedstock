@@ -11,6 +11,7 @@ else
 fi
 
 mkdir -p "$mathjax"
+rm -f build_env_setup.sh conda_build.sh metadata_conda_debug.yaml
 cp -r ./* "$mathjax/"
 
 mkdir -p "${bin_dir}"

@@ -6,4 +6,5 @@ if exist "%mathjax%" (
     echo %mathjax%
 ) else (
     echo Error: "%mathjax%" dir was not found. 1>&2
+    exit /B 1
 )
