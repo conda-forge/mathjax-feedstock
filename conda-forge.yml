@@ -7,6 +7,7 @@ provider:
   linux_ppc64le: azure
   osx_arm64: default
   win_64: github_actions
+  win_arm64: github_actions
 conda_build:
   pkg_format: '2'
 test: native_and_emulated
