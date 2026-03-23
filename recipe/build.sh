@@ -2,27 +2,19 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-if [[ "$OSTYPE" == "msys" ]]; then
-    mathjax="$(cygpath "${LIBRARY_LIB}")/mathjax"
-    bin_dir="$(cygpath "$SCRIPTS")"
-else
-    mathjax="$PREFIX/lib/mathjax"
-    bin_dir="$PREFIX/bin"
-fi
-
-
-
-
+mathjax="$PREFIX/lib/mathjax"
+bin_dir="$PREFIX/bin"
 
 mkdir -p "$mathjax"
-mv ./es5 "$mathjax/"
-
-
+find . -maxdepth 1 \
+    ! -name '.' \
+    ! -name '.github' \
+    ! -name '.gitignore' \
+    ! -name 'build_env_setup.*' \
+    ! -name 'conda_build.*' \
+    ! -name 'metadata_conda_debug.yaml' \
+    -exec cp -r {} "$mathjax/" \;
 
 mkdir -p "${bin_dir}"
 cp "${RECIPE_DIR}/mathjax-path" "${bin_dir}/"
-if [[ "$OSTYPE" == "msys" ]]; then
-    cp "${RECIPE_DIR}/mathjax-path.bat" "${bin_dir}/"
-else
-    chmod +x "${bin_dir}/mathjax-path"
-fi
+chmod +x "${bin_dir}/mathjax-path"
