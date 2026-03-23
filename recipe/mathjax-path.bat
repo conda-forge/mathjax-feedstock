@@ -1,7 +1,7 @@
 @echo off
 REM script_dir == [env_root]\Scripts\
 set "script_dir=%~dp0"
-set "mathjax=%script_dir:~0,-9%\Library\lib\mathjax\es5\"
+set "mathjax=%script_dir:~0,-9%\Library\lib\mathjax\"
 if exist "%mathjax%" (
     echo %mathjax%
 ) else (
